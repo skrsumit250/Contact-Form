@@ -7,12 +7,12 @@ const path = require('path');
 dotenv.config(); // Load environment variables from .env file
 
 const app = express();
-const port = process.env.PORT||3000;
+const port = 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.post('/form', (req, res) => {
+app.post('/submit-form', (req, res) => {
   const { name, email, message } = req.body;
 
   if (!name || !email || !message) {
@@ -31,7 +31,7 @@ app.post('/form', (req, res) => {
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: 'skrsumit250@gmail.com',
+    to: 'Your_Email',
     subject: 'New Contact Form Submission',
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
   };
