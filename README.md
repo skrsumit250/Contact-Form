@@ -10,5 +10,5 @@ A simple contact form application built using Node.js, Express, and Nodemailer. 
 # Getting Started
 * Clone the repository.
 * Install dependencies (express,body-parser,dotenv,nodemailer,nodemon).
-* Chnage crendentials in .env file.
-* Start Server(npm start).
+* Chnage crendentials in .env file and server.js file at const mailOptions() function.
+* Start Server(npm start). 
